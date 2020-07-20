@@ -2,6 +2,9 @@
 @font-face{
     font-family: 'Montserrat', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+    font-family: 'Permanent Marker', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 }
 
 /*Barra de Menu Superior*/
@@ -28,10 +31,8 @@ nav#menu{
     margin-left: 15%;
 }
 nav#menu a.linkTopo {
+    top: -6px;
     position: absolute;
-    font-family: Montserrat;
-    text-decoration: none;
-    color: white;
     margin-left: 0px;
     padding-top: 25px;
 }
@@ -52,10 +53,9 @@ nav#menu ul li a {
     font-family: Montserrat;
     text-decoration: none;
     color: white;
-    padding-left: 50pt;
-    transition: color 0.3s;
+    padding-left: 0pt;
+    margin-left: 50pt;
 }
-
 nav#menu ul li a:hover{
     color: rgb(45, 176, 209);
 }

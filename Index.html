@@ -9,16 +9,16 @@
     <header>
         <div id="barraSuperior">
             <nav id="menu">    
-                <a href="#" class="linkTopo">Wesley Morais</a>
+                <a href="#" class="linkTopo" id="Wesley"><img src="img/Wesley Morais.png"></a>
                 <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Trabalhos</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a id="limenu1" href="#">Home</a></li>
+                <li><a id="limenu2" href="#">Trabalhos</a></li>
+                <li><a id="limenu3" href="#">Sobre</a></li>
+                <li><a id="limenu4" href="#">Contato</a></li>
                 <div class="icones">
-                <li><a href="#" target="blank" class="xicon"><i><img id="iconInsta" src="img/instagran white.png"></i></a></li>
-                <li><a href="#" target="blank" class="xicon"><i><img id="iconFace" src="img/facebook white.png"></i></a></li>
-                <li><a href="#" target="blank" class="xicon"><i><img id="iconIn" src="img/linkedin white.png"></i></a></li>
+                <li><a href="https://www.instagram.com/wesleymmoraiss" target="blank" class="xicon"><i><img id="iconInsta" src="img/instagran white.png"></i></a></li>
+                <li><a href="https://www.facebook.com/wesleymarcos.moraissantos" target="blank" class="xicon"><i><img id="iconFace" src="img/facebook white.png"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/wesley-morais-641411191" target="blank" class="xicon"><i><img id="iconIn" src="img/linkedin white.png"></i></a></li>
                 </div>
                 </ul>
             </nav>
@@ -37,19 +37,6 @@
     <footer>
 
     </footer>
-    <script type="text/javascript">
-        function fade(icone,endereco,endereco2){
-            var insta = document.getElementById(icone);
-            document.getElementById(icone).onmouseenter = function(){
-                insta.src = endereco2;
-                };
-            document.getElementById(icone).onmouseout = function(){
-                var insta = document.getElementById(icone).src = endereco;
-            };
-        }
-        window.onload = fade("iconInsta","img/instagran white.png","img/instagran.png");
-        window.onload = fade("iconFace","img/facebook white.png","img/facebook.png");
-        window.onload = fade("iconIn","img/linkedin white.png","img/linkedin.png");
-    </script> 
+    <script src="js/functions.js"  type="text/javascript"></script>
 </body>
 </html>
