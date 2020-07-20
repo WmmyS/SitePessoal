@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Perfil Wesley Morais</title>
+</head>
+<body>
+    <header>
+        <div id="barraSuperior">
+            <nav id="menu">    
+                <a href="#" class="linkTopo">Wesley Morais</a>
+                <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Trabalhos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+                <div class="icones">
+                <li><a href="#" target="blank" class="xicon"><i><img id="iconInsta" src="img/instagran white.png"></i></a></li>
+                <li><a href="#" target="blank" class="xicon"><i><img id="iconFace" src="img/facebook white.png"></i></a></li>
+                <li><a href="#" target="blank" class="xicon"><i><img id="iconIn" src="img/linkedin white.png"></i></a></li>
+                </div>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <div class="imagem">
+        <img src="img/mesa.png"/>
+    </div>
+    <div class="mensagemImg">
+        <h1>Wesley M. Morais</h1>
+    </div>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript">
+        function fade(icone,endereco,endereco2){
+            var insta = document.getElementById(icone);
+            document.getElementById(icone).onmouseenter = function(){
+                insta.src = endereco2;
+                };
+            document.getElementById(icone).onmouseout = function(){
+                var insta = document.getElementById(icone).src = endereco;
+            };
+        }
+        window.onload = fade("iconInsta","img/instagran white.png","img/instagran.png");
+        window.onload = fade("iconFace","img/facebook white.png","img/facebook.png");
+        window.onload = fade("iconIn","img/linkedin white.png","img/linkedin.png");
+    </script> 
+</body>
+</html>
