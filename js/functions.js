@@ -60,3 +60,30 @@ window.onload = transicao2("limenu1");
 window.onload = transicao2("limenu2");
 window.onload = transicao2("limenu3");
 window.onload = transicao2("limenu4");
+/*Alteração de menu com scroll*/
+    /*Daclaração dos objetos que terão a função*/
+const htmlTag = document.querySelector('html');
+const bodyTag = document.querySelector('body');
+const mynav = document.querySelector('div#barraSuperior');
+const myimg = document.querySelector('.linkTopo');
+const mybt = document.querySelector('label');
+const myElem = document.querySelector('nav li a');
+
+let scrolled = () => {
+    let dec = scrollY / (bodyTag.scrollHeight - innerHeight);
+    return Math.floor(dec * 1300);
+}
+    /*Evento causado quando acionado scroll da página*/
+addEventListener('scroll', () => {
+    mynav.style.setProperty('background-color', scrolled() > 50 ? "rgba(0, 0, 5, 0)":"rgba(0, 0, 5, 1)")
+    mynav.style.setProperty('box-shadow', scrolled() > 50 ? "rgb(245, 103, 21) 0px 0px 0px":"rgb(245, 103, 21) 0px 3px 0px")
+    mynav.style.setProperty('padding-top', scrolled() > 50 ? "20":"0")
+    myimg.style.setProperty('margin-top', scrolled() > 50 ? "50px":"30px")
+    mybt.style.setProperty('top', scrolled() > 50 ? "10px":"-8px")
+    mynav.style.setProperty('background-color', scrolled() > -50 ? "rgba(0, 0, 5, 0)":"rgba(0, 0, 5, 1)")
+    mynav.style.setProperty('box-shadow', scrolled() > -50 ? "rgb(245, 103, 21) 0px 0px 0px":"rgb(245, 103, 21) 0px 3px 0px")
+    mynav.style.setProperty('padding-top', scrolled() > -50 ? "20px":"0px")
+    myimg.style.setProperty('margin-top', scrolled() > -50 ? "50px":"30px")
+    mybt.style.setProperty('top', scrolled() > -50 ? "10px":"-8px")
+    mynav.style.setProperty('position', scrolled() > 50 ? "relative":"fixed")
+})
