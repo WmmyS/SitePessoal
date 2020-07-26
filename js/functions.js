@@ -76,14 +76,23 @@ let scrolled = () => {
     /*Evento causado quando acionado scroll da página*/
 addEventListener('scroll', () => {
     mynav.style.setProperty('background-color', scrolled() > 50 ? "rgba(0, 0, 5, 0)":"rgba(0, 0, 5, 1)")
-    mynav.style.setProperty('box-shadow', scrolled() > 50 ? "rgb(245, 103, 21) 0px 0px 0px":"rgb(245, 103, 21) 0px 3px 0px")
+    mynav.style.setProperty('box-shadow', scrolled() > 50 ? "#D15700 0px 0px 0px":"#D15700 0px 3px 0px")
     mynav.style.setProperty('padding-top', scrolled() > 50 ? "20":"0")
     myimg.style.setProperty('margin-top', scrolled() > 50 ? "50px":"30px")
     mybt.style.setProperty('top', scrolled() > 50 ? "10px":"-8px")
     mynav.style.setProperty('background-color', scrolled() > -50 ? "rgba(0, 0, 5, 0)":"rgba(0, 0, 5, 1)")
-    mynav.style.setProperty('box-shadow', scrolled() > -50 ? "rgb(245, 103, 21) 0px 0px 0px":"rgb(245, 103, 21) 0px 3px 0px")
+    mynav.style.setProperty('box-shadow', scrolled() > -50 ? "#D15700 0px 0px 0px":"#D15700 0px 3px 0px")
     mynav.style.setProperty('padding-top', scrolled() > -50 ? "20px":"0px")
     myimg.style.setProperty('margin-top', scrolled() > -50 ? "50px":"30px")
     mybt.style.setProperty('top', scrolled() > -50 ? "10px":"-8px")
     mynav.style.setProperty('position', scrolled() > 50 ? "relative":"fixed")
-})
+});
+/*Banner Automático utilizando ferramenta Slick*/
+$('.Banner').slick({
+    autoplay: true,
+    play: true,
+    speed:1000,
+    arrows: false,
+    fade: true,
+    pauseOnHover: false,
+  });
